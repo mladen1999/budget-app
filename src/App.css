@@ -1,38 +1,417 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Muli:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  padding-top: 15px;
+  margin: 0 auto;
+}
+.headerImage {
+  margin: 0 0 0 0;
+  height: 28rem;
+  background-image: url("https://as1.ftcdn.net/v2/jpg/02/40/11/46/1000_F_240114602_xp1EtUE0uumYoPg96wUWSAcWuvmuxLgl.jpg");
+}
+.space {
+  height: 6rem;
+  width: 100%;
+  background-color: gray;
+  
+}
+.choose {
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  padding-top: 1rem;
+  
+}
+.percent {
+  margin-left: 50px;
+}
+.incomeSpan {
+  margin-left: 190px;
+}
+.expensesSpan {
+  margin-left: 165px;
+}
+.inc {
+  text-align: left;
+  margin-left: 15px;
+}
+.exp {
+  text-align: left;
+  margin-left: 15px;
+}
+input[type="text"] {
+  height: 3rem;
+  margin-left: 1rem;
+}
+input[type="number"] {
+  height: 3rem;
+  margin-left: 1rem;
+  
+}
+input[type="submit"] {
+  height: 3rem;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header h1 {
+ text-align: center;
+}
+
+.balance {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 1rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.balance h2 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.balance h3 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 4rem;
+  font-weight: 300;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.income-expense {
+  width: 35%;
+}
+
+.plus,
+.minus {
+  margin: 0 2rem;
+  
+}
+
+.plus {
+  color: #77c987;
+  background-color: rgb(131, 174, 131);
+  width: 100%;
+}
+
+.minus {
+  color: #ff716e;
+  background-color: rgb(200, 61, 61);
+  width: 100%;
+}
+
+.income-expense h3 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.income-expense p {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-wrapper {
+  max-width: 920px;
+  margin: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.income {
+  float: left;
+}
+
+.expense {
+  margin-left: 140px;
+  width: 50%;
+  float: left;
+  
+}
+
+.input-group input:not([type="submit"]) {
+  width: 30rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  background: transparent;
+  border-bottom: 0.2rem solid #777;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.8rem;
+  color: #eee;
+  outline: none;
+  transition: border-bottom 0.4s;
+}
+
+.income input:not([type="submit"]):focus {
+  border-bottom: 0.2rem solid #77c987;
+}
+
+.expense input:not([type="submit"]):focus {
+  border-bottom: 0.2rem solid #ff716e;
+}
+
+.input-group input[type="submit"] {
+  width: 10rem;
+  padding: 0.7rem;
+  border: none;
+  outline: none;
+  border-radius: 0.7rem;
+  font-family: "Muli", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #eee;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 1rem;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.input-group input[type="submit"]:active {
+  transform: translateY(0.3rem);
+}
+
+.income input[type="submit"] {
+  background-color: #77c987;
+}
+
+.expense input[type="submit"] {
+  background-color: #ff716e;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  /* -webkit-appearance: none; */
+  opacity: 1;
+}
+
+.transactions {
+  margin-top: 3rem;
+}
+
+.transactions h2 {
+  font-family: "Baloo da 2", serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.transactions-income {
+
+  color: rgb(161, 150, 150);
+  width: 25%;
+  position: absolute;
+  margin-left: 300px;
+
+}
+
+.transactions-expense {
+
+  margin-left: 750px;
+  width: 25%;
+  color: red;
+  
+}
+
+.transaction-list {
+  width: 100%;
+  max-height: 35rem;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #aaa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+.transaction {
+  list-style: none;
+  font-family: "Baloo da 2", serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  padding: 0.4rem 0.4rem 0.4rem 0.7rem;
+  border-radius: 0.3rem;
+  width: 32rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.transactions-income .transaction {
+  background-color: #5a9b67;
+  width: 100%;
+}
+
+.transactions-expense .transaction {
+  background-color: #cf5856;
+  width: 100%;
+}
+
+.transaction-text {
+  width: 23rem;
+}
+
+.transaction-amount {
+  transform: translateX(4rem);
+}
+
+.delete-btn {
+  /* transform: translateX(4rem); */
+  transform: translateX(0rem);
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: rgb(167, 155, 155);
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 2500px) and (min-width: 1600px) {
+  .percent {
+    margin-left: 20px;
+    
   }
-  to {
-    transform: rotate(360deg);
+  #submitBtnP {
+    border-radius: 60%;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(12, 248, 28);
+    width: 40px;
+    margin-left: 7px;
+    margin-top: 3px;
+  }
+  #submitBtnM {
+    border-radius: 60%;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(227, 16, 16);
+    width: 40px;
+    margin-left: 7px;
+    margin-top: 3px;
+  }
+  .incomeSpan {
+    margin-left: 305px;
+  }
+  .expensesSpan {
+    margin-left: 279px;
+  }
+  .inc {
+    text-align: left;
+    margin-left: 25px;
+  }
+  .exp {
+    text-align: left;
+    margin-left: 25px;
+  }
+
+  .choose {
+
+    margin-left: 750px;
+  }
+  .transactions-income {
+
+    color: rgb(161, 150, 150);
+    width: 25%;
+    position: absolute;
+    margin-left: 490px;
+  
+  }
+  
+  .transactions-expense {
+  
+    margin-left: 990px;
+    width: 25%;
+    color: red;
+    
+  }
+}
+
+@media (max-width: 1599px) and (min-width: 900px) {
+  .percent {
+    margin-left: 15px;
+  }
+  #submitBtnP {
+    border-radius: 60%;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(12, 248, 28);
+    width: 40px;
+    margin-left: 7px;
+    margin-top: 3px;
+  }
+  #submitBtnM {
+    border-radius: 60%;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(227, 16, 16);
+    width: 40px;
+    margin-left: 7px;
+    margin-top: 3px;
+  }
+  .incomeSpan {
+    margin-left: 225px;
+  }
+  .expensesSpan {
+    margin-left: 205px;
+  }
+  .inc {
+    text-align: left;
+    margin-left: 25px;
+  }
+  .exp {
+    text-align: left;
+    margin-left: 25px;
+  }
+
+
+ .choose {
+  margin-left: 560px;
+ }
+
+  html {
+    font-size: 52%;
+  }
+
+  .transaction-list {
+    max-height: 29rem;
+  }
+
+  .transaction {
+    width: 28rem;
   }
 }
